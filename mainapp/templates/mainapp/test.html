@@ -1,0 +1,101 @@
+{% extends 'mainapp/base.html' %}
+
+{% block menu %}
+    <div class="container">
+        {% include 'mainapp/includes/inc_main_menu.html' %}
+    </div>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a href="admin/" class="navbar-brand fs-2" data-bs-toggle=tooltip" data-bs-placement="left" title="Добавить новые данные в базу"><i class="bi bi-server"></i></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDarkDropdown"
+                        aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                               data-toggle="dropdown" aria-expanded="false">
+                                Выбор города
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-5 offset-1">
+                <h5>Город</h5>
+                <form action="">
+                    <input type="text" id="city" class="form-control form-control-sm" name="city" placeholder="Введите город">
+                    <input type="submit" name="send" class="mt-2 btn btn-primary" value="Узнать">
+                </form>
+
+            </div>
+            <div class="col-4 offset-1">
+                <h5>Информация о погоде</h5>
+                <div class="alert alert-primary">
+                    qq
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="w-50 p-3">
+                <div class="dropdown-menu position-static d-flex align-items-stretch p-3 rounded-3 shadow-lg w-600px">
+                    <nav class="d-grid gap-2">
+                        <div>
+                            <div class="row">
+                                <strong class="col">Город</strong>
+                                <strong class="col">5 &deg;C</strong>
+                            </div>
+                            <div class="row">
+                                <span class="col">17:00</span>
+                                <span class="text-center">23 октября 2022</span>
+                            </div>
+                            <p class="text-center mt-2">Ясно, Облачно с прояснениями</p>
+                            <div class="p-2 bg-light border">Элемент сетки 3</div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="w-50 p-3">
+                <div class="dropdown-menu position-static d-flex align-items-stretch p-3 rounded-3 shadow-lg w-600px">
+                    <nav class="d-grid gap-2 col-8">
+                        <div>
+                            <strong class="d-block">График изменения за сутки</strong>
+                            <samp>Тут будет график изменения температуры по часам и градусам.</samp>
+                            <svg class="bi" width="32" height="32">
+                                <use xlink:href="#question-circle"></use>
+                            </svg>
+                            <svg class="bi" width="32" height="32">
+                                <use xlink:href="#image-fill"></use>
+                            </svg>
+                        </div>
+
+                    </nav>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

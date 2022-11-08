@@ -1,0 +1,88 @@
+{% extends 'mainapp/base.html' %}
+
+{% block menu %}
+    <div class="container">
+        {% include 'mainapp/includes/inc_main_menu.html' %}
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex flex-row align-items-center d-grid gap-5">
+            <a href="admin/" class=" fs-2" data-bs-toggle=tooltip" data-bs-placement="left" title="Добавить новые данные в базу"><i class="bi bi-server"></i></a>
+
+            <div class="dropdown sticky-md-top ">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                   data-toggle="dropdown" aria-expanded="false">
+                   Выбор города
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    {% for city in citys %}
+                        <li><a class="dropdown-item" href="{% url 'select_city' city.pk %}">{{ city.city_name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+{#            <input type="date" class="form-control" id="date" name="date" placeholder="Дата" required>#}
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+{#    блок карта#}
+    {% for el in  dataweather%}
+        <div class="container mt-2">
+            <div class="row px-4">
+                <div class="border position-static d-flex justify-content-center p-3 rounded-3 shadow-lg w-600px">
+                    <div class="d-flex flex-row d-grid gap-1">
+                        <div class="card shadow-sm p-1 mbg-body rounded" style="width: 30rem;">
+                            <div class="d-flex flex-row d-grid gap-2 justify-content-end sticky-top">
+                                <a href="#" class="stretched-link text-dark" data-bs-toggle=tooltip" data-bs-placement="right" title="Экспорт в json"  style="position: relative;"><b><i class="bi bi-filetype-json"></i></b></a>
+                                <a href="#" class="stretched-link text-dark" data-bs-toggle=tooltip" data-bs-placement="left" title="Редактирование" style="position: relative;"><b><i class="bi bi-pencil-square"></i></b></a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="col card-title text-start text-primary"><strong>{{ el.city }}</strong></h5>
+                                    <h5 class="col card-title text-end text-primary"><strong>{{ el.temperature }} &deg;C</strong></h5>
+                                </div>
+                                <p class="card-text text-center"><strong>{{ el.weather }}</strong></p>
+                                <div class="row">
+                                    <p class="col card-text text-right">{{ el.date_time|time:"H:i" }}</p>
+                                    <p class="col card-text text-end">{{ el.date_time | date:"H M Y" }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow-sm p-1 bg-body rounded" style="width: 48rem;">
+
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <p class="text-muted fs-1"><small><i class="bi bi-graph-up"></i></small></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+{#    кнопка добавления нового города#}
+{#    <div class="container mt-2 d-flex justify-content-end p-3 text-primary fs-1">#}
+{#        <a href="#" class="stretched-link" data-bs-toggle=tooltip" data-bs-placement="left" title="Добавить новый город" style="position: relative;"><b><i class="bi bi-plus-circle"></i></b></a>#}
+{#    </div>#}
+{% endblock %}
+
+
+
+
+
+
+
+

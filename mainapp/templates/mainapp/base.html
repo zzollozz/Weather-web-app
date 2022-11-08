@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block css %}
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- Подключаем CSS DateTimePicker -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.css" />
+    {% endblock %}
+    <title>WiatherApp</title>
+</head>
+
+<body>
+    {% block menu %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+                     viewBox="0 0 24 24"><title>Product</title>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+                </svg>
+                <small class="d-block mb-3 text-muted">© 2022</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Выбор города</h5>
+                <p>Инструкция</p>
+                    <ul class="list-unstyled text-small">
+                        <li><p>ШАГ 1: Выберите Город</p></li>
+                        <li><p>ШАГ 2: Выберите Дату</p></li>
+                        <li><p>ШАГ 3: Выберите Время</p></li>
+                        <li><p>ШАГ 4: Нажмите Показать</p></li>
+                    </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Выбор даты</h5>
+
+{#                <ul class="list-unstyled text-small">#}
+{#                    <li><a class="link-secondary" href="#">Cool stuff</a></li>#}
+{#                </ul>#}
+            </div>
+            <div class="col-6 col-md">
+                <h5>Выбор врмени</h5>
+
+{#                <ul class="list-unstyled text-small">#}
+{#                    <li><a class="link-secondary" href="#">Название ресурса</a></li>#}
+{#                    <li><a class="link-secondary" href="#">Ресурс</a></li>#}
+{#                    <li><a class="link-secondary" href="#">Another resource</a></li>#}
+{#                    <li><a class="link-secondary" href="#">Final resource</a></li>#}
+{#                </ul>#}
+            </div>
+
+            <div class="col-6 col-md">
+                <h5>Показать</h5>
+            </div>
+        </div>
+    </footer>
+
+
+
+{#    <div class="footer">#}
+{#        <div class="clearfix">#}
+{#            <div class="text-footer">#}
+{#                <footer>#}
+{#                    <nav class="navbar fixed-bottom navbar-light border-top" style="background-color: #a6b1b9;">#}
+{#                        <div class="container-fluid d-flex flex-row d-grid gap-4 justify-content-center">#}
+{#                            <p class="mt-5 mb-3 text-muted"><small>© 2022</small></p>#}
+{#                            <p class="mt-5 mb-3 text-muted"><b>WiatherApp</b></p>#}
+{#                        </div>#}
+{#                    </nav>#}
+{#                </footer>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+    {% block js %}
+        <!-- Подключаем js-файл Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+    {% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
+
