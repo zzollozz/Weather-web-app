@@ -21,68 +21,20 @@
     {% endblock %}
 
 
-
-    <footer class="container py-5">
-        <div class="row">
-            <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-                     viewBox="0 0 24 24"><title>Product</title>
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
-                </svg>
-                <small class="d-block mb-3 text-muted">© 2022</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Выбор города</h5>
-                <p>Инструкция</p>
-                    <ul class="list-unstyled text-small">
-                        <li><p>ШАГ 1: Выберите Город</p></li>
-                        <li><p>ШАГ 2: Выберите Дату</p></li>
-                        <li><p>ШАГ 3: Выберите Время</p></li>
-                        <li><p>ШАГ 4: Нажмите Показать</p></li>
-                    </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Выбор даты</h5>
-
-{#                <ul class="list-unstyled text-small">#}
-{#                    <li><a class="link-secondary" href="#">Cool stuff</a></li>#}
-{#                </ul>#}
-            </div>
-            <div class="col-6 col-md">
-                <h5>Выбор врмени</h5>
-
-{#                <ul class="list-unstyled text-small">#}
-{#                    <li><a class="link-secondary" href="#">Название ресурса</a></li>#}
-{#                    <li><a class="link-secondary" href="#">Ресурс</a></li>#}
-{#                    <li><a class="link-secondary" href="#">Another resource</a></li>#}
-{#                    <li><a class="link-secondary" href="#">Final resource</a></li>#}
-{#                </ul>#}
-            </div>
-
-            <div class="col-6 col-md">
-                <h5>Показать</h5>
+    <div class="footer">
+        <div class="clearfix">
+            <div class="text-footer">
+                <footer>
+                    <nav class="navbar fixed-bottom navbar-light border-top" style="background-color: #c4d5e3;">
+                        <div class="container-fluid d-flex flex-row d-grid gap-4 justify-content-center">
+                            <p class="mt-1 mb-1 text-muted"><small>© 2022</small></p>
+                            <p class="mt-1 mb-1 text-muted"><b>WA</b></p>
+                        </div>
+                    </nav>
+                </footer>
             </div>
         </div>
-    </footer>
-
-
-
-{#    <div class="footer">#}
-{#        <div class="clearfix">#}
-{#            <div class="text-footer">#}
-{#                <footer>#}
-{#                    <nav class="navbar fixed-bottom navbar-light border-top" style="background-color: #a6b1b9;">#}
-{#                        <div class="container-fluid d-flex flex-row d-grid gap-4 justify-content-center">#}
-{#                            <p class="mt-5 mb-3 text-muted"><small>© 2022</small></p>#}
-{#                            <p class="mt-5 mb-3 text-muted"><b>WiatherApp</b></p>#}
-{#                        </div>#}
-{#                    </nav>#}
-{#                </footer>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    </div>
 
     {% block js %}
         <!-- Подключаем js-файл Bootstrap -->
