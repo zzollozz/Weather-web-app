@@ -88,13 +88,11 @@
             <div class="d-flex flex-col">
                 <div class="form-group">
                     {#                    <label for="exampleFormControlSelect1">Выбор города</label>#}
-                    <select class="form-control border border-primary" id="exampleFormControlSelect1"  style="width: 200px;">
+                    <select class="form-control border border-primary" style="width: 200px;" onchange="window.location.href = this.options[this.selectedIndex].value">
                         <option selected>Выбор города</option>
                         {% for city in citys %}
-
-                            <option value="{{ city.pk }}">{{ city.city_name }}</option>
+                            <option value="http://127.0.0.1:8080{% url 'select_city' city.pk %}">{{ city.city_name }}</option>
                         {% endfor %}
-
                     </select>
                 </div>
             </div>
