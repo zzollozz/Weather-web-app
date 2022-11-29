@@ -1,6 +1,7 @@
 from django.urls import path
 from mainapp.views import index, data_input, data_weather_in_city, city_selection
 
+app_name = 'mainapp'
 
 urlpatterns = [
     path('', index, name='index'),

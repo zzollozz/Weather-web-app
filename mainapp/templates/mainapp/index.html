@@ -12,18 +12,18 @@
         <div class="d-flex flex-row align-items-center d-grid gap-5">
 
 
-            <div class="dropdown sticky-md-top ">
-                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                   data-toggle="dropdown" aria-expanded="false">
-                    Выбор города
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    {% for city in citys %}
-                        <li><a class="dropdown-item" href="{% url 'select_city' city.pk %}">{{ city.city_name }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+{#            <div class="dropdown sticky-md-top ">#}
+{#                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"#}
+{#                   data-toggle="dropdown" aria-expanded="false">#}
+{#                    Выбор города#}
+{#                </a>#}
+{#                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#                    {% for city in citys %}#}
+{#                        <li><a class="dropdown-item" href="{% url 'select_city' city.pk %}">{{ city.city_name }}</a>#}
+{#                        </li>#}
+{#                    {% endfor %}#}
+{#                </ul>#}
+{#            </div>#}
 
             {#            <input type="date" class="form-control" id="date" name="date" placeholder="Дата" required>#}
 
@@ -78,7 +78,7 @@
 
             <div class="d-flex flex-col">
                 <div class="form-group">
-                    <a href="{% url 'data_input' %}" class="" data-bs-toggle=tooltip" data-bs-placement="left"
+                    <a href="{% url 'mainapp:data_input' %}" class="" data-bs-toggle=tooltip" data-bs-placement="left"
                        title="Добавить новые данные в базу">
                         <button type="button" class="btn btn-outline-primary" style="width: 200px;">Добавить город</button>
                     </a>
@@ -91,7 +91,7 @@
                     <select class="form-control border border-primary" style="width: 200px;" onchange="window.location.href = this.options[this.selectedIndex].value">
                         <option selected>Выбор города</option>
                         {% for city in citys %}
-                            <option value="http://127.0.0.1:8080{% url 'select_city' city.pk %}">{{ city.city_name }}</option>
+                            <option value="{% url 'mainapp:select_city' city.pk %}">{{ city.city_name }}</option>
                         {% endfor %}
                     </select>
                 </div>
